@@ -1,0 +1,101 @@
+:root {
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 50%);
+  --Black: hsl(0, 0%, 7%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', sans-serif;
+}
+body {
+  background: var(--Yellow);
+}
+
+#card {
+  width: 385px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  box-shadow: 8px 8px var(--Black);
+  background: var(--White);
+  border-radius: 1rem;
+}
+
+.card-img {
+ padding: 1rem 0 1rem 1.4rem;
+ 
+}
+.card-img img{
+  border-radius: 0.8rem;
+}
+.card-info {
+  padding: 0 0 1rem 1.4rem;
+}
+.tag{
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  background-color: var(--Yellow);
+  font-weight: 600;
+  border-radius: 0.25rem;
+}
+.date{
+  margin-top: 0.8rem;
+  display: block;
+  color: var(--Grey);
+  font-weight: 600;
+}
+h1{
+  margin: 0.5rem 0 0.5rem 0;
+  font-weight: 800;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+h1:hover{
+  color: var(--Yellow);
+}
+article{
+  color: var(--Grey);
+font-weight: 300;
+}
+.avtar-img{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+.avtar-img img{
+  height: 33px;
+  width: 33px;
+  margin-right: 0.5rem;
+}
+.avtar-img figcaption{
+  font-weight: 600;
+}
+
+@media screen and (max-width: 400px) {
+  #card {
+    width: 300px;
+    
+  }
+  .card-img{
+    padding: 1rem;
+    
+  }
+  .card-img img{
+    width: 268px;
+    border-radius: 1rem;
+  }
+  .card-info{
+    padding: 0 1rem 1rem 1rem;
+  }
+  .date{
+    font-weight: 400;
+    color: var(--Black);
+  }
+  h1{
+    font-size: 1.3rem;
+  }
+}
