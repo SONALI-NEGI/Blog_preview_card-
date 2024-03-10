@@ -3,93 +3,125 @@
   --White: hsl(0, 0%, 100%);
   --Grey: hsl(0, 0%, 50%);
   --Black: hsl(0, 0%, 7%);
+  --ff: "Figtree", sans-serif;
+  --fw-regular: 400;
+  --fw-semi: 600;
+  --fw-bold: 800;
+}
+/* css resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Figtree", sans-serif;
+}
+html,
+body {
+  height: 100%;
 }
 body {
-  background: var(--Yellow);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-#card {
-  width: 385px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid black;
-  box-shadow: 8px 8px var(--Black);
-  background: var(--White);
-  border-radius: 1rem;
-}
-
-.card-img {
-  padding: 1rem 0.25rem 1rem 1.4rem;
-}
-.card-img img {
-  border-radius: 0.8rem;
-  width: min(95%, 500px);
-}
-.card-info {
-  padding: 0 0 1rem 1.4rem;
-}
-.tag {
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-  background-color: var(--Yellow);
-  font-weight: 600;
-  border-radius: 0.25rem;
-}
-.date {
-  margin-top: 0.8rem;
+img {
   display: block;
-  color: var(--Grey);
-  font-weight: 600;
+  max-width: 100%;
 }
-h1 {
-  margin: 0.5rem 0 0.5rem 0;
-  font-weight: 800;
-  font-size: 1.5rem;
+button {
+  font: inherit;
+}
+p,
+h2 {
+  overflow-wrap: break-word;
+}
+h2 {
+  line-height: 1;
+}
+/* general styling */
+body {
+  font-family: var(--ff);
+  font-size: 0.95rem;
+  font-weight: var(--fw-regular);
+  color: var(--Black);
+  background-color: var(--Yellow);
+  display: grid;
+  place-content: center;
+  margin: 3rem 1rem;
+}
+
+/* utilities */
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* button */
+.btn {
   cursor: pointer;
+  text-decoration: none;
+  display: block;
+  border: 0;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  padding: 0.1rem 0.9rem;
+  background-color: var(--Yellow);
+  color: var(--Black);
+  font-weight: var(--fw-bold);
+  font-size: 0.925rem;
 }
-h1:hover {
+.btn:is(:hover, :focus) {
+  border: 0.5px solid var(--Black);
+  background: var(--White);
+  font-size: 0.8255rem;
+}
+
+/*card */
+.card {
+  padding: 1.5rem;
+  max-width: 385px;
+  background-color: var(--White);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--Grey);
+  box-shadow: 8px 8px var(--Black);
+}
+.card__img {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card__title {
+  margin: 1rem 0;
+}
+
+.card__title:is(:hover, :focus) {
   color: var(--Yellow);
 }
-article {
+.card__detail {
   color: var(--Grey);
-  font-weight: 300;
+  margin: 0;
+  font-weight: var(--fw-regular);
 }
-.avtar-img {
-  margin-top: 1rem;
+.flex-group {
   display: flex;
   align-items: center;
+  margin-top: 1rem;
 }
-.avtar-img img {
-  height: 33px;
-  width: 33px;
+.card__instructor-img {
+  height: 2.5rem;
   margin-right: 0.5rem;
 }
-.avtar-img figcaption {
-  font-weight: 600;
+.card__instructor {
+  font-weight: var(--fw-bold);
 }
-
-@media screen and (max-width: 500px) {
-  #card {
-    width: 300px;
-  }
-  .card-img img {
-    border-radius: 1rem;
-  }
-  .card-info {
-    padding: 0 1rem 1rem 1rem;
-  }
-  .date {
-    font-weight: 400;
-    color: var(--Black);
-  }
-  h1 {
-    font-size: 1.3rem;
+@media (min-width: 600px) {
+  body {
+    margin: 0;
   }
 }

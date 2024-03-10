@@ -17,6 +17,7 @@ This project showcases a blog preview card with HTML and CSS. It is designed to 
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
+- BEM Notation
 
 
 ## Author
