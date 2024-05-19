@@ -48,7 +48,6 @@ body {
   background-color: var(--Yellow);
   display: grid;
   place-content: center;
-  margin: 3rem 1rem;
 }
 
 /* utilities */
@@ -62,66 +61,81 @@ body {
   width: 1px;
 }
 
-/* button */
-.btn {
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  border: 0;
-  border-radius: 0.3rem;
-  margin: 1rem 0;
-  padding: 0.1rem 0.9rem;
-  background-color: var(--Yellow);
-  color: var(--Black);
-  font-weight: var(--fw-bold);
-  font-size: 0.925rem;
-}
-.btn:is(:hover, :focus) {
-  border: 0.5px solid var(--Black);
-  background: var(--White);
-  font-size: 0.8255rem;
-}
-
 /*card */
 .card {
   padding: 1.5rem;
-  max-width: 385px;
+  max-width: 327px;
+
   background-color: var(--White);
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   overflow: hidden;
   border: 1px solid var(--Grey);
   box-shadow: 8px 8px var(--Black);
 }
-.card__img {
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-.card__title {
-  margin: 1rem 0;
+.blogimage {
+  border-radius: 0.625rem;
 }
 
-.card__title:is(:hover, :focus) {
-  color: var(--Yellow);
+.content {
+  display: grid;
+  row-gap: 12px;
+  margin: 1.5rem 0;
 }
-.card__detail {
-  color: var(--Grey);
-  margin: 0;
+
+.category {
+  align-self: start;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--Yellow);
+  color: var(--Black);
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+}
+.category:is(:hover, :focus) {
+  border: 0.5px solid var(--Black);
+  background: var(--White);
+}
+.publishdate {
+  font-size: 0.75rem;
   font-weight: var(--fw-regular);
 }
-.flex-group {
+.title {
+  font-size: 1.25rem;
+}
+
+.title:is(:hover, :focus) {
+  color: var(--Yellow);
+}
+.description {
+  color: var(--Grey);
+  font-size: 0.875rem;
+  font-weight: var(--fw-regular);
+}
+.author {
   display: flex;
-  align-items: center;
-  margin-top: 1rem;
+  gap: 12px;
 }
-.card__instructor-img {
-  height: 2.5rem;
-  margin-right: 0.5rem;
-}
-.card__instructor {
+.authorname {
   font-weight: var(--fw-bold);
+  font-size: 0.875rem;
+  align-self: center;
 }
-@media (min-width: 600px) {
-  body {
-    margin: 0;
+@media (min-width: 450px) {
+  .card {
+    max-width: 384px;
+  }
+  .category,
+  .publishdate {
+    font-size: 0.875rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
   }
 }
